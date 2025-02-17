@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vatro - Profesjonalna obróbka metali i drewna, CNC, spawanie, wyceny konstrukcji oraz doradztwo techniczne. Działamy w Rawiczu (63-900) i okolicach do 70 km. Sprawdź naszą ofertę!">
+    <meta name="keywords" content="obróbka metali, obróbka drewna, doradztwo techniczne, spawanie, CNC, wyceny konstrukcji, technologia, wsparcie techniczne, pliki DXF, frezowanie, toczenie, Rawicz, 63-900, Bojanowo, Miejska Górka, Wąsosz, Żmigród, Góra, Milicz, Krobia, Poniec, Gostyń, Leszno, Kościan, projektowanie konstrukcji, cięcie metalu, gięcie blach, konstrukcje stalowe">
+    <meta name="author" content="Vatro">
+    <title>Vatro - Obróbka Metali, CNC, Spawanie | Rawicz i okolice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: black;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: black;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .logo {
+            height: 40px;
+        }
+        .menu {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+        nav a:hover, nav a.active {
+            background-color: #ffcc00;
+            color: black;
+            padding: 12px;
+            border-radius: 5px;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .footer img {
+            height: 20px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu {
+                flex-direction: column;
+            }
+            section {
+                font-size: 18px;
+            }
+            .footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav a");
+            window.addEventListener("scroll", function() {
+                let fromTop = window.scrollY;
+                links.forEach(link => {
+                    let section = document.querySelector(link.getAttribute("href"));
+                    if (
+                        section.offsetTop <= fromTop + 60 &&
+                        section.offsetTop + section.offsetHeight > fromTop + 60
+                    ) {
+                        links.forEach(l => l.classList.remove("active"));
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <img src="ścieżka/do/logo.png" alt="Logo" class="logo">
+        <div class="menu">
+            <a href="#strona-glowna">Strona Główna</a>
+            <a href="#mozliwosci">Możliwości</a>
+            <a href="#realizacje">Realizacje</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+    
+    <section id="strona-glowna">
+        <p>Jesteś na stronie głównej.</p>
+    </section>
+    <section id="mozliwosci">
+        <p>Jesteś w sekcji możliwości.</p>
+    </section>
+    <section id="realizacje">
+        <p>Jesteś w sekcji realizacje.</p>
+    </section>
+    <section id="kontakt">
+        <p>Jesteś w sekcji kontakt.</p>
+    </section>
+    
+    <div class="footer">
+        <img src="ścieżka/do/telefon.png" alt="Telefon"> +48 123 456 789
+        <img src="ścieżka/do/email.png" alt="Email"> kontakt@vatro.pl
+    </div>
+</body>
+</html>
