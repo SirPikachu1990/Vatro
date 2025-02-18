@@ -10,6 +10,7 @@ body {
     background-color: white;
     color: black;
     text-align: center;
+    padding-bottom: 60px; /* Dostosowanie pod stałą stopkę */
 }
 
 /* Menu */
@@ -75,27 +76,39 @@ section {
     min-height: 100vh;
 }
 
-/* Stopka */
+/* Stopka - zawsze widoczna na dole ekranu */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #444;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px 0;
 }
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
+/* Wyrównanie ikon z tekstem */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Możliwość zmiany wymiarów ikon */
 .icon {
-    width: 30px;
+    width: 30px; /* Możesz zmienić na dowolny rozmiar */
     height: auto;
-    margin-right: 10px;
 }
 
+/* Separator między numerem telefonu a e-mailem */
 .separator {
     font-size: 24px;
     font-weight: bold;
